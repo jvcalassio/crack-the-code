@@ -17,6 +17,7 @@ function RegisterPage({ performRegister }) {
             await performRegister({ login, pwd, pwdConfirm });
         } catch(e) {
             setError(e.message);
+            setLogging(false);
         }
     }
 

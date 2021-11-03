@@ -9,7 +9,7 @@ function RegisterController() {
     const history = useHistory();
 
     const performRegister = async ({ login, pwd, pwdConfirm }) => {
-        if(login === undefined)
+        if(login === undefined || login === "")
             throw new Error("Insira um usuário")
             
         if(pwd === undefined || !pwd.match(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/))
